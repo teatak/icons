@@ -1,7 +1,6 @@
 node_modules/
 build/
 **/.DS_Store
-
 # npmignore
 !build/
 src/
@@ -9,4 +8,8 @@ test/
 site/
 docs/
 storybook-static/
+scripts/
 .storybook/
+rollup.config.js
+tsconfig.json
+tsconfig.build.json

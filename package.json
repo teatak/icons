@@ -1,6 +1,6 @@
 {
   "name": "@teatak/icons",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "teatak icons",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
@@ -16,7 +16,7 @@
   },
   "scripts": {
     "clean:dist": "rimraf dist",
-    "build": "export NODE_OPTIONS=--max-old-space-size=8192 && npm-run-all clean:** build:**",
+    "build": "export NODE_OPTIONS=--max-old-space-size=8192 && npm run svgr && npm-run-all clean:** build:**",
     "build:rollup": "rollup -c --bundleConfigAsCjs",
     "svgr": "npx @svgr/cli --out-dir src/svgs --no-dimensions --typescript --index-template scripts/index-template.js -- src/files"
   },
