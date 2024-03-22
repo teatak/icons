@@ -1,0 +1,12 @@
+node_modules/
+build/
+**/.DS_Store
+
+# npmignore
+!build/
+src/
+test/
+site/
+docs/
+storybook-static/
+.storybook/
