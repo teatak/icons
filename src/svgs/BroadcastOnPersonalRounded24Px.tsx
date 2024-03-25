@@ -1,7 +1,17 @@
 import * as React from "react";
 import type { SVGProps } from "react";
-const SvgBroadcastOnPersonalRounded24Px = (props: SVGProps<SVGSVGElement>) => (
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" {...props}>
+import { Ref, forwardRef, memo } from "react";
+const SvgBroadcastOnPersonalRounded24Px = (
+  props: SVGProps<SVGSVGElement>,
+  ref: Ref<SVGSVGElement>
+) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 24 24"
+    className="tui-icon"
+    ref={ref}
+    {...props}
+  >
     <g fill="none">
       <path d="M0 0h24v24H0z" />
       <path d="M0 0h24v24H0z" />
@@ -11,4 +21,6 @@ const SvgBroadcastOnPersonalRounded24Px = (props: SVGProps<SVGSVGElement>) => (
     <path d="M17 9.5a6.5 6.5 0 0 0-6.5 6.5c0 1.79.73 3.42 1.9 4.6l1.06-1.06C12.56 18.63 12 17.38 12 16c0-2.76 2.24-5 5-5s5 2.24 5 5c0 1.37-.56 2.62-1.46 3.52l1.07 1.06A6.5 6.5 0 0 0 17 9.5" />
   </svg>
 );
-export default SvgBroadcastOnPersonalRounded24Px;
+const ForwardRef = forwardRef(SvgBroadcastOnPersonalRounded24Px);
+const Memo = memo(ForwardRef);
+export default Memo;

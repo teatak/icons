@@ -1,7 +1,17 @@
 import * as React from "react";
 import type { SVGProps } from "react";
-const SvgEggAltTwoTone24Px = (props: SVGProps<SVGSVGElement>) => (
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" {...props}>
+import { Ref, forwardRef, memo } from "react";
+const SvgEggAltTwoTone24Px = (
+  props: SVGProps<SVGSVGElement>,
+  ref: Ref<SVGSVGElement>
+) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 24 24"
+    className="tui-icon"
+    ref={ref}
+    {...props}
+  >
     <path fill="none" d="M0 0h24v24H0z" />
     <path
       d="M17.59 10.42c-.69-.68-1.21-1.51-1.76-2.39C14.48 5.86 13.31 4 9.97 4c-1.62 0-2.96.52-3.98 1.55C4.68 6.88 3.97 8.99 4 11.5c.05 4.51 4.33 5.5 5.97 5.5 1.69 0 2.68 1.05 3.34 1.74.72.76 1.19 1.26 2.68 1.26 1.89 0 4.01-2.13 4.01-4.98 0-2.2-.51-2.71-2.41-4.6M12 15.5c-1.93 0-3.5-1.57-3.5-3.5s1.57-3.5 3.5-3.5 3.5 1.57 3.5 3.5-1.57 3.5-3.5 3.5"
@@ -11,4 +21,6 @@ const SvgEggAltTwoTone24Px = (props: SVGProps<SVGSVGElement>) => (
     <circle cx={12} cy={12} r={3.5} />
   </svg>
 );
-export default SvgEggAltTwoTone24Px;
+const ForwardRef = forwardRef(SvgEggAltTwoTone24Px);
+const Memo = memo(ForwardRef);
+export default Memo;

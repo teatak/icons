@@ -1,7 +1,17 @@
 import * as React from "react";
 import type { SVGProps } from "react";
-const SvgBlurCircularTwoTone24Px = (props: SVGProps<SVGSVGElement>) => (
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" {...props}>
+import { Ref, forwardRef, memo } from "react";
+const SvgBlurCircularTwoTone24Px = (
+  props: SVGProps<SVGSVGElement>,
+  ref: Ref<SVGSVGElement>
+) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 24 24"
+    className="tui-icon"
+    ref={ref}
+    {...props}
+  >
     <path fill="none" d="M0 0h24v24H0z" />
     <path d="M14 7.5c.28 0 .5-.22.5-.5s-.22-.5-.5-.5-.5.22-.5.5.22.5.5.5" />
     <circle cx={14} cy={10} r={1} />
@@ -13,4 +23,6 @@ const SvgBlurCircularTwoTone24Px = (props: SVGProps<SVGSVGElement>) => (
     <path d="M10 7.5c.28 0 .5-.22.5-.5s-.22-.5-.5-.5-.5.22-.5.5.22.5.5.5m4 9c-.28 0-.5.22-.5.5s.22.5.5.5.5-.22.5-.5-.22-.5-.5-.5m3-7c-.28 0-.5.22-.5.5s.22.5.5.5.5-.22.5-.5-.22-.5-.5-.5m0 4c-.28 0-.5.22-.5.5s.22.5.5.5.5-.22.5-.5-.22-.5-.5-.5" />
   </svg>
 );
-export default SvgBlurCircularTwoTone24Px;
+const ForwardRef = forwardRef(SvgBlurCircularTwoTone24Px);
+const Memo = memo(ForwardRef);
+export default Memo;

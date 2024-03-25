@@ -1,7 +1,17 @@
 import * as React from "react";
 import type { SVGProps } from "react";
-const SvgRailwayAlertTwoTone24Px = (props: SVGProps<SVGSVGElement>) => (
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" {...props}>
+import { Ref, forwardRef, memo } from "react";
+const SvgRailwayAlertTwoTone24Px = (
+  props: SVGProps<SVGSVGElement>,
+  ref: Ref<SVGSVGElement>
+) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 24 24"
+    className="tui-icon"
+    ref={ref}
+    {...props}
+  >
     <path fill="none" d="M0 0h24v24H0z" />
     <path
       d="M4 16.5c0 .83.67 1.5 1.5 1.5h9c.83 0 1.5-.67 1.5-1.5V13H4zm6-2.5c.83 0 1.5.67 1.5 1.5S10.83 17 10 17s-1.5-.67-1.5-1.5S9.17 14 10 14M4.43 6H11c0-.33.03-.66.08-.98-3.37-.1-5.75.21-6.65.98"
@@ -12,4 +22,6 @@ const SvgRailwayAlertTwoTone24Px = (props: SVGProps<SVGSVGElement>) => (
     <path d="M18 1c-2.76 0-5 2.24-5 5s2.24 5 5 5 5-2.24 5-5-2.24-5-5-5m.5 8h-1V8h1zm0-2h-1V3h1z" />
   </svg>
 );
-export default SvgRailwayAlertTwoTone24Px;
+const ForwardRef = forwardRef(SvgRailwayAlertTwoTone24Px);
+const Memo = memo(ForwardRef);
+export default Memo;

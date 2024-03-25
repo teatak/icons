@@ -1,7 +1,17 @@
 import * as React from "react";
 import type { SVGProps } from "react";
-const SvgLinkedCameraTwoTone24Px = (props: SVGProps<SVGSVGElement>) => (
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" {...props}>
+import { Ref, forwardRef, memo } from "react";
+const SvgLinkedCameraTwoTone24Px = (
+  props: SVGProps<SVGSVGElement>,
+  ref: Ref<SVGSVGElement>
+) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 24 24"
+    className="tui-icon"
+    ref={ref}
+    {...props}
+  >
     <path fill="none" d="M0 0h24v24H0z" />
     <path d="M20 20H4V8h4.05l1.83-2H15V4H9L7.17 6H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V9h-2zM16 2v1.33c2.58 0 4.66 2.09 4.67 4.66H22A6.003 6.003 0 0 0 16 2m0 2.67V6c1.11 0 1.99.89 2 1.99h1.33A3.327 3.327 0 0 0 16 4.67" />
     <path
@@ -11,4 +21,6 @@ const SvgLinkedCameraTwoTone24Px = (props: SVGProps<SVGSVGElement>) => (
     <path d="M12 9c-2.76 0-5 2.24-5 5s2.24 5 5 5 5-2.24 5-5-2.24-5-5-5m0 8c-1.65 0-3-1.35-3-3s1.35-3 3-3 3 1.35 3 3-1.35 3-3 3" />
   </svg>
 );
-export default SvgLinkedCameraTwoTone24Px;
+const ForwardRef = forwardRef(SvgLinkedCameraTwoTone24Px);
+const Memo = memo(ForwardRef);
+export default Memo;

@@ -1,7 +1,17 @@
 import * as React from "react";
 import type { SVGProps } from "react";
-const SvgAddHomeWorkRounded24Px = (props: SVGProps<SVGSVGElement>) => (
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" {...props}>
+import { Ref, forwardRef, memo } from "react";
+const SvgAddHomeWorkRounded24Px = (
+  props: SVGProps<SVGSVGElement>,
+  ref: Ref<SVGSVGElement>
+) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 24 24"
+    className="tui-icon"
+    ref={ref}
+    {...props}
+  >
     <g fill="none">
       <path d="M0 0h24v24H0z" />
       <path d="M0 0h24v24H0z" />
@@ -10,4 +20,6 @@ const SvgAddHomeWorkRounded24Px = (props: SVGProps<SVGSVGElement>) => (
     <path d="M23 18c0-2.76-2.24-5-5-5s-5 2.24-5 5 2.24 5 5 5 5-2.24 5-5m-5.5 3v-2.5H15v-1h2.5V15h1v2.5H21v1h-2.5V21z" />
   </svg>
 );
-export default SvgAddHomeWorkRounded24Px;
+const ForwardRef = forwardRef(SvgAddHomeWorkRounded24Px);
+const Memo = memo(ForwardRef);
+export default Memo;

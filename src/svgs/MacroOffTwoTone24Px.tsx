@@ -1,7 +1,17 @@
 import * as React from "react";
 import type { SVGProps } from "react";
-const SvgMacroOffTwoTone24Px = (props: SVGProps<SVGSVGElement>) => (
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" {...props}>
+import { Ref, forwardRef, memo } from "react";
+const SvgMacroOffTwoTone24Px = (
+  props: SVGProps<SVGSVGElement>,
+  ref: Ref<SVGSVGElement>
+) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 24 24"
+    className="tui-icon"
+    ref={ref}
+    {...props}
+  >
     <path fill="none" d="M0 0h24v24H0z" />
     <path
       d="m10.11 5.69-.81-.56c-.18-.13-.41-.2-.64-.2-.25 0-.47.1-.66.24l1.39 1.39c.18-.33.43-.63.72-.87M15.83 8.9l-.88-.42c-.12.73-.51 1.36-1.05 1.82l.8.57c.18.13.4.2.64.2.47 0 .87-.28 1.05-.69.06-.14.09-.28.09-.44.01-.45-.25-.84-.65-1.04M13.89 5.68c.55.46.94 1.1 1.06 1.84l.87-.42c.41-.2.66-.59.66-1.03a1.14 1.14 0 0 0-1.78-.94zM12 5c.36 0 .71.07 1.03.19l.11-1.09C13.12 3.49 12.62 3 12 3s-1.12.49-1.14 1.1l.12 1.09C11.3 5.07 11.64 5 12 5M15.94 18.77l-.71-.71c-.32.47-.59.97-.79 1.5.54-.2 1.04-.47 1.5-.79M5.44 15.44a7.04 7.04 0 0 0 4.12 4.12 7.04 7.04 0 0 0-4.12-4.12"
@@ -11,4 +21,6 @@ const SvgMacroOffTwoTone24Px = (props: SVGProps<SVGSVGElement>) => (
     <path d="M2.81 2.81 1.39 4.22l4.42 4.42c-.19.4-.3.84-.3 1.29a3.147 3.147 0 0 0 3.58 3.11A3.15 3.15 0 0 0 12 15c.05 0 .11-.01.16-.01l1.64 1.64A8.85 8.85 0 0 0 12 22c2.02 0 3.88-.67 5.38-1.8l2.4 2.4 1.41-1.41zm11.63 16.75c.2-.54.47-1.04.79-1.5l.71.71c-.46.32-.96.59-1.5.79" />
   </svg>
 );
-export default SvgMacroOffTwoTone24Px;
+const ForwardRef = forwardRef(SvgMacroOffTwoTone24Px);
+const Memo = memo(ForwardRef);
+export default Memo;

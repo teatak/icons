@@ -1,7 +1,17 @@
 import * as React from "react";
 import type { SVGProps } from "react";
-const SvgTroubleshootRounded24Px = (props: SVGProps<SVGSVGElement>) => (
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" {...props}>
+import { Ref, forwardRef, memo } from "react";
+const SvgTroubleshootRounded24Px = (
+  props: SVGProps<SVGSVGElement>,
+  ref: Ref<SVGSVGElement>
+) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 24 24"
+    className="tui-icon"
+    ref={ref}
+    {...props}
+  >
     <g fill="none">
       <path d="M0 0h24v24H0z" />
       <path d="M0 0h24v24H0z" />
@@ -10,4 +20,6 @@ const SvgTroubleshootRounded24Px = (props: SVGProps<SVGSVGElement>) => (
     <path d="m8.43 9.69 1.03 4.47c.11.49.55.84 1.05.84.46 0 .87-.3 1.02-.74l1.01-3.04.69 1.66c.16.37.52.62.92.62h.58c.41 0 .75-.34.75-.75s-.34-.75-.75-.75h-.23l-.97-2.34c-.17-.4-.56-.66-1-.66h-.05c-.46 0-.87.3-1.02.74l-.88 2.63-1.04-4.54C9.43 7.35 8.99 7 8.49 7c-.47 0-.89.31-1.03.76L6.45 11h-4.7c-.41 0-.75.34-.75.75s.34.75.75.75h5.07c.44 0 .82-.28.95-.7z" />
   </svg>
 );
-export default SvgTroubleshootRounded24Px;
+const ForwardRef = forwardRef(SvgTroubleshootRounded24Px);
+const Memo = memo(ForwardRef);
+export default Memo;

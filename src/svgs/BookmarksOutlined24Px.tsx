@@ -1,9 +1,21 @@
 import * as React from "react";
 import type { SVGProps } from "react";
-const SvgBookmarksOutlined24Px = (props: SVGProps<SVGSVGElement>) => (
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" {...props}>
+import { Ref, forwardRef, memo } from "react";
+const SvgBookmarksOutlined24Px = (
+  props: SVGProps<SVGSVGElement>,
+  ref: Ref<SVGSVGElement>
+) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 24 24"
+    className="tui-icon"
+    ref={ref}
+    {...props}
+  >
     <path fill="none" d="M0 0h24v24H0z" />
     <path d="M15 7v12.97l-4.21-1.81-.79-.34-.79.34L5 19.97V7zm4-6H8.99C7.89 1 7 1.9 7 3h10c1.1 0 2 .9 2 2v13l2 1V3c0-1.1-.9-2-2-2m-4 4H5c-1.1 0-2 .9-2 2v16l7-3 7 3V7c0-1.1-.9-2-2-2" />
   </svg>
 );
-export default SvgBookmarksOutlined24Px;
+const ForwardRef = forwardRef(SvgBookmarksOutlined24Px);
+const Memo = memo(ForwardRef);
+export default Memo;

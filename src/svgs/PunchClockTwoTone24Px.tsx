@@ -1,7 +1,17 @@
 import * as React from "react";
 import type { SVGProps } from "react";
-const SvgPunchClockTwoTone24Px = (props: SVGProps<SVGSVGElement>) => (
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" {...props}>
+import { Ref, forwardRef, memo } from "react";
+const SvgPunchClockTwoTone24Px = (
+  props: SVGProps<SVGSVGElement>,
+  ref: Ref<SVGSVGElement>
+) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 24 24"
+    className="tui-icon"
+    ref={ref}
+    {...props}
+  >
     <path fill="none" d="M0 0h24v24H0z" />
     <path
       d="M8 3h8v3H8zM5 20h14V8H5zm7-11c2.76 0 5 2.24 5 5s-2.24 5-5 5-5-2.24-5-5 2.24-5 5-5"
@@ -12,4 +22,6 @@ const SvgPunchClockTwoTone24Px = (props: SVGProps<SVGSVGElement>) => (
     <path d="m13.85 15.14-1.35-1.35V11.5h-1v2.71l1.64 1.64z" />
   </svg>
 );
-export default SvgPunchClockTwoTone24Px;
+const ForwardRef = forwardRef(SvgPunchClockTwoTone24Px);
+const Memo = memo(ForwardRef);
+export default Memo;

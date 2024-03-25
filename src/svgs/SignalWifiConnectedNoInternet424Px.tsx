@@ -1,11 +1,21 @@
 import * as React from "react";
 import type { SVGProps } from "react";
+import { Ref, forwardRef, memo } from "react";
 const SvgSignalWifiConnectedNoInternet424Px = (
-  props: SVGProps<SVGSVGElement>
+  props: SVGProps<SVGSVGElement>,
+  ref: Ref<SVGSVGElement>
 ) => (
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" {...props}>
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 24 24"
+    className="tui-icon"
+    ref={ref}
+    {...props}
+  >
     <path fill="none" d="M0 0h24v24H0z" />
     <path d="M24 8.98A16.88 16.88 0 0 0 12 4C7.31 4 3.07 5.9 0 8.98L12 21v-9h8.99zM19.59 14l-2.09 2.09L15.41 14 14 15.41l2.09 2.09L14 19.59 15.41 21l2.09-2.08L19.59 21 21 19.59l-2.08-2.09L21 15.41z" />
   </svg>
 );
-export default SvgSignalWifiConnectedNoInternet424Px;
+const ForwardRef = forwardRef(SvgSignalWifiConnectedNoInternet424Px);
+const Memo = memo(ForwardRef);
+export default Memo;

@@ -1,7 +1,17 @@
 import * as React from "react";
 import type { SVGProps } from "react";
-const SvgContentPasteSearchRounded24Px = (props: SVGProps<SVGSVGElement>) => (
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" {...props}>
+import { Ref, forwardRef, memo } from "react";
+const SvgContentPasteSearchRounded24Px = (
+  props: SVGProps<SVGSVGElement>,
+  ref: Ref<SVGSVGElement>
+) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 24 24"
+    className="tui-icon"
+    ref={ref}
+    {...props}
+  >
     <g fill="none">
       <path d="M0 0h24v24H0z" />
       <path d="M0 0h24v24H0z" />
@@ -10,4 +20,6 @@ const SvgContentPasteSearchRounded24Px = (props: SVGProps<SVGSVGElement>) => (
     <path d="m22.3 20.9-2-2c.58-1.01.95-2.23.51-3.65-.53-1.72-2.04-3.05-3.84-3.22a4.498 4.498 0 0 0-4.95 4.95c.18 1.79 1.5 3.31 3.22 3.84 1.43.44 2.64.07 3.65-.51l2 2c.39.39 1.01.39 1.4 0s.4-1.02.01-1.41M16.5 19c-1.4 0-2.5-1.1-2.5-2.5s1.1-2.5 2.5-2.5 2.5 1.1 2.5 2.5-1.1 2.5-2.5 2.5" />
   </svg>
 );
-export default SvgContentPasteSearchRounded24Px;
+const ForwardRef = forwardRef(SvgContentPasteSearchRounded24Px);
+const Memo = memo(ForwardRef);
+export default Memo;

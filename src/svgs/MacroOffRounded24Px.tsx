@@ -1,7 +1,17 @@
 import * as React from "react";
 import type { SVGProps } from "react";
-const SvgMacroOffRounded24Px = (props: SVGProps<SVGSVGElement>) => (
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" {...props}>
+import { Ref, forwardRef, memo } from "react";
+const SvgMacroOffRounded24Px = (
+  props: SVGProps<SVGSVGElement>,
+  ref: Ref<SVGSVGElement>
+) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 24 24"
+    className="tui-icon"
+    ref={ref}
+    {...props}
+  >
     <g fill="none">
       <path d="M0 0h24v24H0z" />
       <path d="M0 0h24v24H0z" />
@@ -10,4 +20,6 @@ const SvgMacroOffRounded24Px = (props: SVGProps<SVGSVGElement>) => (
     <path d="M2.1 3.51a.996.996 0 0 0 0 1.41l3.93 3.93c-.35.52-.53 1.17-.38 1.89.22 1.13 1.26 1.98 2.41 2 .54.01 1.02-.15 1.44-.43l.02.02-.02.17A2.5 2.5 0 0 0 12 15c.05 0 .1-.01.16-.02l1.64 1.64A8.9 8.9 0 0 0 12 22c2.02 0 3.88-.67 5.38-1.79l1.69 1.69a.996.996 0 1 0 1.41-1.41L3.51 3.51a.996.996 0 0 0-1.41 0" />
   </svg>
 );
-export default SvgMacroOffRounded24Px;
+const ForwardRef = forwardRef(SvgMacroOffRounded24Px);
+const Memo = memo(ForwardRef);
+export default Memo;

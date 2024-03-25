@@ -1,7 +1,17 @@
 import * as React from "react";
 import type { SVGProps } from "react";
-const SvgCancelScheduleSendTwoTone24Px = (props: SVGProps<SVGSVGElement>) => (
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" {...props}>
+import { Ref, forwardRef, memo } from "react";
+const SvgCancelScheduleSendTwoTone24Px = (
+  props: SVGProps<SVGSVGElement>,
+  ref: Ref<SVGSVGElement>
+) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 24 24"
+    className="tui-icon"
+    ref={ref}
+    {...props}
+  >
     <path fill="none" d="M0 0h24v24H0z" />
     <path
       d="m3 17.97 6.1-2.61c.02-.14.04-.29.07-.43L3 15.75zM16.5 11c-3.03 0-5.5 2.47-5.5 5.5s2.47 5.5 5.5 5.5 5.5-2.47 5.5-5.5-2.47-5.5-5.5-5.5m2.47 7.27-.71.71-1.77-1.77-1.77 1.77-.71-.71 1.77-1.77-1.77-1.77.71-.71 1.77 1.77 1.77-1.77.71.71-1.77 1.77zM3 8.25l7.52 1-7.51-3.22z"
@@ -11,4 +21,6 @@ const SvgCancelScheduleSendTwoTone24Px = (props: SVGProps<SVGSVGElement>) => (
     <path d="m18.27 14.03-1.77 1.76-1.77-1.76-.7.7 1.76 1.77-1.76 1.77.7.7 1.77-1.76 1.77 1.76.7-.7-1.76-1.77 1.76-1.77z" />
   </svg>
 );
-export default SvgCancelScheduleSendTwoTone24Px;
+const ForwardRef = forwardRef(SvgCancelScheduleSendTwoTone24Px);
+const Memo = memo(ForwardRef);
+export default Memo;

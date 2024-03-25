@@ -1,7 +1,17 @@
 import * as React from "react";
 import type { SVGProps } from "react";
-const SvgCoffeeMakerTwoTone24Px = (props: SVGProps<SVGSVGElement>) => (
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" {...props}>
+import { Ref, forwardRef, memo } from "react";
+const SvgCoffeeMakerTwoTone24Px = (
+  props: SVGProps<SVGSVGElement>,
+  ref: Ref<SVGSVGElement>
+) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 24 24"
+    className="tui-icon"
+    ref={ref}
+    {...props}
+  >
     <path fill="none" d="M0 0h24v24H0z" />
     <path
       d="M13 19c1.65 0 3-1.35 3-3v-3h-6v3c0 1.65 1.35 3 3 3"
@@ -11,4 +21,6 @@ const SvgCoffeeMakerTwoTone24Px = (props: SVGProps<SVGSVGElement>) => (
     <circle cx={13} cy={9} r={1} />
   </svg>
 );
-export default SvgCoffeeMakerTwoTone24Px;
+const ForwardRef = forwardRef(SvgCoffeeMakerTwoTone24Px);
+const Memo = memo(ForwardRef);
+export default Memo;

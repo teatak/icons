@@ -1,7 +1,17 @@
 import * as React from "react";
 import type { SVGProps } from "react";
-const SvgAdminPanelSettingsTwoTone24Px = (props: SVGProps<SVGSVGElement>) => (
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" {...props}>
+import { Ref, forwardRef, memo } from "react";
+const SvgAdminPanelSettingsTwoTone24Px = (
+  props: SVGProps<SVGSVGElement>,
+  ref: Ref<SVGSVGElement>
+) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 24 24"
+    className="tui-icon"
+    ref={ref}
+    {...props}
+  >
     <path fill="none" d="M0 0h24v24H0z" />
     <path
       d="m16 7.58-5.5-2.4L5 7.58v3.6c0 3.5 2.33 6.74 5.5 7.74.25-.08.49-.2.73-.3-.15-.51-.23-1.06-.23-1.62 0-2.97 2.16-5.43 5-5.91z"
@@ -16,4 +26,6 @@ const SvgAdminPanelSettingsTwoTone24Px = (props: SVGProps<SVGSVGElement>) => (
     <path d="M17 17.5c-.73 0-2.19.36-2.24 1.08.5.71 1.32 1.17 2.24 1.17s1.74-.46 2.24-1.17c-.05-.72-1.51-1.08-2.24-1.08" />
   </svg>
 );
-export default SvgAdminPanelSettingsTwoTone24Px;
+const ForwardRef = forwardRef(SvgAdminPanelSettingsTwoTone24Px);
+const Memo = memo(ForwardRef);
+export default Memo;

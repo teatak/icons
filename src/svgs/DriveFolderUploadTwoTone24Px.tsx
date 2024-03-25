@@ -1,7 +1,17 @@
 import * as React from "react";
 import type { SVGProps } from "react";
-const SvgDriveFolderUploadTwoTone24Px = (props: SVGProps<SVGSVGElement>) => (
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" {...props}>
+import { Ref, forwardRef, memo } from "react";
+const SvgDriveFolderUploadTwoTone24Px = (
+  props: SVGProps<SVGSVGElement>,
+  ref: Ref<SVGSVGElement>
+) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 24 24"
+    className="tui-icon"
+    ref={ref}
+    {...props}
+  >
     <path fill="none" d="M0 0h24v24H0z" />
     <path
       d="M9.17 6H4v12h16V8h-8.83zM16 13h-3v4h-2v-4H8l4.01-4z"
@@ -11,4 +21,6 @@ const SvgDriveFolderUploadTwoTone24Px = (props: SVGProps<SVGSVGElement>) => (
     <path d="M11 13v4h2v-4h3l-3.99-4L8 13z" />
   </svg>
 );
-export default SvgDriveFolderUploadTwoTone24Px;
+const ForwardRef = forwardRef(SvgDriveFolderUploadTwoTone24Px);
+const Memo = memo(ForwardRef);
+export default Memo;

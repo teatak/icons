@@ -1,9 +1,21 @@
 import * as React from "react";
 import type { SVGProps } from "react";
-const SvgHdrOffSharp24Px = (props: SVGProps<SVGSVGElement>) => (
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" {...props}>
+import { Ref, forwardRef, memo } from "react";
+const SvgHdrOffSharp24Px = (
+  props: SVGProps<SVGSVGElement>,
+  ref: Ref<SVGSVGElement>
+) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 24 24"
+    className="tui-icon"
+    ref={ref}
+    {...props}
+  >
     <path fill="none" d="M0 0h24v24H0z" />
     <path d="M17.5 15v-2h1.1l.9 2H21l-.9-2.1h.9V9h-5v4.86L17.14 15zm0-4.5h2v1h-2zm-4.5 0v.36l1.5 1.5V10.5c0-.8-.7-1.5-1.5-1.5h-1.86l1.5 1.5zM2.51 2.49 1.45 3.55 6.9 9h-.4v2h-2V9H3v6h1.5v-2.5h2V15H8v-4.9l1.5 1.5V15h3.4l7.6 7.6 1.06-1.06z" />
   </svg>
 );
-export default SvgHdrOffSharp24Px;
+const ForwardRef = forwardRef(SvgHdrOffSharp24Px);
+const Memo = memo(ForwardRef);
+export default Memo;

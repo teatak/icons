@@ -1,7 +1,17 @@
 import * as React from "react";
 import type { SVGProps } from "react";
-const SvgCancelScheduleSendRounded24Px = (props: SVGProps<SVGSVGElement>) => (
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" {...props}>
+import { Ref, forwardRef, memo } from "react";
+const SvgCancelScheduleSendRounded24Px = (
+  props: SVGProps<SVGSVGElement>,
+  ref: Ref<SVGSVGElement>
+) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 24 24"
+    className="tui-icon"
+    ref={ref}
+    {...props}
+  >
     <g fill="none">
       <path d="M0 0h24v24H0z" />
       <path d="M0 0h24v24H0z" />
@@ -10,4 +20,6 @@ const SvgCancelScheduleSendRounded24Px = (props: SVGProps<SVGSVGElement>) => (
     <path d="M18.62 14.38c-.2-.2-.51-.2-.71 0l-1.41 1.41-1.41-1.41c-.2-.2-.51-.2-.71 0s-.2.51 0 .71l1.41 1.41-1.41 1.41c-.2.2-.2.51 0 .71s.51.2.71 0l1.41-1.41 1.41 1.41c.2.2.51.2.71 0s.2-.51 0-.71l-1.41-1.41 1.41-1.41c.2-.2.2-.52 0-.71" />
   </svg>
 );
-export default SvgCancelScheduleSendRounded24Px;
+const ForwardRef = forwardRef(SvgCancelScheduleSendRounded24Px);
+const Memo = memo(ForwardRef);
+export default Memo;

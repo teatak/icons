@@ -1,7 +1,17 @@
 import * as React from "react";
 import type { SVGProps } from "react";
-const SvgLightbulbCircleTwoTone24Px = (props: SVGProps<SVGSVGElement>) => (
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" {...props}>
+import { Ref, forwardRef, memo } from "react";
+const SvgLightbulbCircleTwoTone24Px = (
+  props: SVGProps<SVGSVGElement>,
+  ref: Ref<SVGSVGElement>
+) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 24 24"
+    className="tui-icon"
+    ref={ref}
+    {...props}
+  >
     <path fill="none" d="M0 0h24v24H0z" />
     <path
       d="M12 4c-4.41 0-8 3.59-8 8s3.59 8 8 8 8-3.59 8-8-3.59-8-8-8m0 15c-.83 0-1.5-.67-1.5-1.5h3c0 .83-.67 1.5-1.5 1.5m3-2.5H9V15h6zm-.03-2.5H9.03A4.97 4.97 0 0 1 7 10c0-2.76 2.24-5 5-5s5 2.24 5 5c0 1.64-.8 3.09-2.03 4"
@@ -11,4 +21,6 @@ const SvgLightbulbCircleTwoTone24Px = (props: SVGProps<SVGSVGElement>) => (
     <path d="M12 19c.83 0 1.5-.67 1.5-1.5h-3c0 .83.67 1.5 1.5 1.5M9 15h6v1.5H9zM12 5c-2.76 0-5 2.24-5 5 0 1.64.8 3.09 2.03 4h5.95A4.99 4.99 0 0 0 17 10c0-2.76-2.24-5-5-5m2.43 7.5H9.57A3.47 3.47 0 0 1 8.5 10c0-1.93 1.57-3.5 3.5-3.5s3.5 1.57 3.5 3.5c0 .95-.39 1.84-1.07 2.5" />
   </svg>
 );
-export default SvgLightbulbCircleTwoTone24Px;
+const ForwardRef = forwardRef(SvgLightbulbCircleTwoTone24Px);
+const Memo = memo(ForwardRef);
+export default Memo;

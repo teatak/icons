@@ -1,7 +1,17 @@
 import * as React from "react";
 import type { SVGProps } from "react";
-const SvgSportsFootballTwoTone24Px = (props: SVGProps<SVGSVGElement>) => (
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" {...props}>
+import { Ref, forwardRef, memo } from "react";
+const SvgSportsFootballTwoTone24Px = (
+  props: SVGProps<SVGSVGElement>,
+  ref: Ref<SVGSVGElement>
+) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 24 24"
+    className="tui-icon"
+    ref={ref}
+    {...props}
+  >
     <path fill="none" d="M0 0h24v24H0z" />
     <path
       d="M16.26 5c-.35 0-.8.01-1.33.06l4.03 4.03c.14-1.63.01-3.07-.17-3.86-.51-.11-1.39-.23-2.53-.23M5.21 18.77c.51.11 1.39.23 2.53.23.34 0 .79-.01 1.3-.05l-4.01-4.01c-.12 1.62 0 3.04.18 3.83M7.87 7.87c-1.28 1.28-2.03 2.97-2.45 4.65l6.04 6.04c1.6-.39 3.33-1.11 4.66-2.44 1.28-1.28 2.03-2.95 2.44-4.63l-6.05-6.05c-1.59.39-3.31 1.11-4.64 2.43M15.5 9.9l-5.6 5.6-1.4-1.4 5.6-5.6z"
@@ -11,4 +21,6 @@ const SvgSportsFootballTwoTone24Px = (props: SVGProps<SVGSVGElement>) => (
     <path d="m8.5 14.1 5.6-5.6 1.4 1.4-5.6 5.6z" />
   </svg>
 );
-export default SvgSportsFootballTwoTone24Px;
+const ForwardRef = forwardRef(SvgSportsFootballTwoTone24Px);
+const Memo = memo(ForwardRef);
+export default Memo;

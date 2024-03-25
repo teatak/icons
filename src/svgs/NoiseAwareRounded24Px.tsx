@@ -1,7 +1,17 @@
 import * as React from "react";
 import type { SVGProps } from "react";
-const SvgNoiseAwareRounded24Px = (props: SVGProps<SVGSVGElement>) => (
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" {...props}>
+import { Ref, forwardRef, memo } from "react";
+const SvgNoiseAwareRounded24Px = (
+  props: SVGProps<SVGSVGElement>,
+  ref: Ref<SVGSVGElement>
+) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 24 24"
+    className="tui-icon"
+    ref={ref}
+    {...props}
+  >
     <g fill="none">
       <path d="M0 0h24v24H0z" />
       <path d="M0 0h24v24H0z" />
@@ -13,4 +23,6 @@ const SvgNoiseAwareRounded24Px = (props: SVGProps<SVGSVGElement>) => (
     <path d="M5.75 7.01c.34-.43.27-1.06-.16-1.41a1.005 1.005 0 0 0-1.25 1.57c.43.34 1.06.27 1.41-.16M18.25 16.99c-.34.43-.27 1.06.16 1.41s1.06.27 1.41-.16c.34-.43.27-1.06-.16-1.41-.43-.34-1.06-.27-1.41.16M4.2 13.78c-.12-.54-.66-.88-1.2-.75s-.88.66-.75 1.2c.12.54.66.88 1.2.75a1 1 0 0 0 .75-1.2M19.8 10.22c.12.54.66.88 1.2.75s.88-.66.75-1.2-.66-.88-1.2-.75a1 1 0 0 0-.75 1.2M8.53 19.21a.99.99 0 0 0-1.33.47.99.99 0 0 0 .47 1.33c.5.24 1.1.03 1.33-.47a.996.996 0 0 0-.47-1.33M15.47 4.79c.5.24 1.1.03 1.33-.47a.99.99 0 0 0-.47-1.33.99.99 0 0 0-1.33.47.996.996 0 0 0 .47 1.33M15.47 19.21c-.5.24-.71.84-.47 1.33s.84.71 1.33.47c.5-.24.71-.84.47-1.33a.99.99 0 0 0-1.33-.47M8.53 4.79c.5-.24.7-.83.47-1.33-.24-.5-.84-.71-1.33-.47s-.72.84-.48 1.34.84.7 1.34.46M21 13.03c-.54-.12-1.07.21-1.2.75-.12.54.21 1.07.75 1.2a1 1 0 1 0 .45-1.95M3 10.97c.54.12 1.07-.21 1.2-.75.12-.54-.21-1.07-.75-1.2s-1.07.21-1.2.75a1 1 0 0 0 .75 1.2M19.66 7.17c.43-.34.5-.97.16-1.41s-.97-.5-1.41-.16c-.43.34-.5.97-.16 1.41.35.43.98.5 1.41.16M4.34 16.83c-.43.34-.5.97-.16 1.41.34.43.97.5 1.41.16.43-.34.5-.97.16-1.41s-.98-.5-1.41-.16" />
   </svg>
 );
-export default SvgNoiseAwareRounded24Px;
+const ForwardRef = forwardRef(SvgNoiseAwareRounded24Px);
+const Memo = memo(ForwardRef);
+export default Memo;

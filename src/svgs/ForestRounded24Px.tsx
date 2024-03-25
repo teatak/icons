@@ -1,7 +1,17 @@
 import * as React from "react";
 import type { SVGProps } from "react";
-const SvgForestRounded24Px = (props: SVGProps<SVGSVGElement>) => (
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" {...props}>
+import { Ref, forwardRef, memo } from "react";
+const SvgForestRounded24Px = (
+  props: SVGProps<SVGSVGElement>,
+  ref: Ref<SVGSVGElement>
+) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 24 24"
+    className="tui-icon"
+    ref={ref}
+    {...props}
+  >
     <g fill="none">
       <path d="M0 0h24v24H0z" />
       <path d="M0 0h24v24H0z" />
@@ -10,4 +20,6 @@ const SvgForestRounded24Px = (props: SVGProps<SVGSVGElement>) => (
     <path d="M23.01 16.46 20.14 12h-.06c.81 0 1.28-.91.82-1.57l-5.08-7.26a1 1 0 0 0-1.64 0l-1.57 2.24 3.11 4.44a2.004 2.004 0 0 1-.16 2.5l2.29 3.57c.4.62.42 1.4.07 2.04-.01.02-.02.03-.03.04h4.28c.79 0 1.27-.88.84-1.54M13 20c0 1.1.9 2 2 2s2-.9 2-2v-1h-4z" />
   </svg>
 );
-export default SvgForestRounded24Px;
+const ForwardRef = forwardRef(SvgForestRounded24Px);
+const Memo = memo(ForwardRef);
+export default Memo;

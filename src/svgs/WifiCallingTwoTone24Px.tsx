@@ -1,7 +1,17 @@
 import * as React from "react";
 import type { SVGProps } from "react";
-const SvgWifiCallingTwoTone24Px = (props: SVGProps<SVGSVGElement>) => (
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" {...props}>
+import { Ref, forwardRef, memo } from "react";
+const SvgWifiCallingTwoTone24Px = (
+  props: SVGProps<SVGSVGElement>,
+  ref: Ref<SVGSVGElement>
+) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 24 24"
+    className="tui-icon"
+    ref={ref}
+    {...props}
+  >
     <path fill="none" d="M0 0h24v24H0z" />
     <path
       d="M15.2 18.21c1.2.41 2.48.67 3.8.75v-1.49c-.88-.07-1.75-.22-2.6-.45zM6.54 5h-1.5c.09 1.32.35 2.59.75 3.8l1.2-1.2c-.24-.84-.39-1.71-.45-2.6"
@@ -11,4 +21,6 @@ const SvgWifiCallingTwoTone24Px = (props: SVGProps<SVGSVGElement>) => (
     <path d="M22 4.95C21.79 4.78 19.67 3 16.5 3c-3.18 0-5.29 1.78-5.5 1.95L16.5 12z" />
   </svg>
 );
-export default SvgWifiCallingTwoTone24Px;
+const ForwardRef = forwardRef(SvgWifiCallingTwoTone24Px);
+const Memo = memo(ForwardRef);
+export default Memo;

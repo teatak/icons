@@ -1,7 +1,17 @@
 import * as React from "react";
 import type { SVGProps } from "react";
-const SvgRememberMeTwoTone24Px = (props: SVGProps<SVGSVGElement>) => (
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" {...props}>
+import { Ref, forwardRef, memo } from "react";
+const SvgRememberMeTwoTone24Px = (
+  props: SVGProps<SVGSVGElement>,
+  ref: Ref<SVGSVGElement>
+) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 24 24"
+    className="tui-icon"
+    ref={ref}
+    {...props}
+  >
     <path fill="none" d="M0 0h24v24H0z" />
     <path
       d="M7 20h10v1H7zM7 17.52V18h10v-.48c-1.47-.99-3.22-1.52-5-1.52s-3.53.53-5 1.52"
@@ -13,4 +23,6 @@ const SvgRememberMeTwoTone24Px = (props: SVGProps<SVGSVGElement>) => (
     <path d="M12 13c1.66 0 3-1.34 3-3s-1.34-3-3-3-3 1.34-3 3 1.34 3 3 3m0-4c.55 0 1 .45 1 1s-.45 1-1 1-1-.45-1-1 .45-1 1-1" />
   </svg>
 );
-export default SvgRememberMeTwoTone24Px;
+const ForwardRef = forwardRef(SvgRememberMeTwoTone24Px);
+const Memo = memo(ForwardRef);
+export default Memo;

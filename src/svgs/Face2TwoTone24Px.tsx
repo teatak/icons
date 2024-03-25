@@ -1,7 +1,17 @@
 import * as React from "react";
 import type { SVGProps } from "react";
-const SvgFace2TwoTone24Px = (props: SVGProps<SVGSVGElement>) => (
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" {...props}>
+import { Ref, forwardRef, memo } from "react";
+const SvgFace2TwoTone24Px = (
+  props: SVGProps<SVGSVGElement>,
+  ref: Ref<SVGSVGElement>
+) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 24 24"
+    className="tui-icon"
+    ref={ref}
+    {...props}
+  >
     <path fill="none" d="M0 0h24v24H0z" />
     <path
       d="M6.02 5H6C3.79 5 2 6.79 2 9c0 .55.12 1.07.32 1.54A10 10 0 0 1 6.02 5M15.1 3.5C14.36 2.59 13.25 2 12 2s-2.36.59-3.1 1.5c.98-.32 2.02-.5 3.1-.5s2.12.18 3.1.5M12 5.31c0 2.24 1.82 4.06 4.06 4.06.93 0 1.82-.32 2.53-.89A7.98 7.98 0 0 0 12.03 5c-.01.11-.03.21-.03.31M2.5 16.12c-.31.56-.5 1.19-.5 1.88a4 4 0 0 0 5.25 3.8 10.08 10.08 0 0 1-4.75-5.68M21.68 10.54c.2-.47.32-.99.32-1.54 0-2.21-1.79-4-4-4h-.02a10 10 0 0 1 3.7 5.54M16.75 21.8A3.999 3.999 0 0 0 22 18c0-.69-.19-1.32-.5-1.88-.81 2.44-2.52 4.47-4.75 5.68"
@@ -12,4 +22,6 @@ const SvgFace2TwoTone24Px = (props: SVGProps<SVGSVGElement>) => (
     <circle cx={15} cy={14} r={1.25} />
   </svg>
 );
-export default SvgFace2TwoTone24Px;
+const ForwardRef = forwardRef(SvgFace2TwoTone24Px);
+const Memo = memo(ForwardRef);
+export default Memo;

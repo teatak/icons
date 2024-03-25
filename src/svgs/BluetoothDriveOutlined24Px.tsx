@@ -1,7 +1,17 @@
 import * as React from "react";
 import type { SVGProps } from "react";
-const SvgBluetoothDriveOutlined24Px = (props: SVGProps<SVGSVGElement>) => (
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" {...props}>
+import { Ref, forwardRef, memo } from "react";
+const SvgBluetoothDriveOutlined24Px = (
+  props: SVGProps<SVGSVGElement>,
+  ref: Ref<SVGSVGElement>
+) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 24 24"
+    className="tui-icon"
+    ref={ref}
+    {...props}
+  >
     <path fill="none" d="M0 0h24v24H0z" />
     <circle cx={6.5} cy={14.5} r={1.5} />
     <circle cx={15.5} cy={14.5} r={1.5} />
@@ -9,4 +19,6 @@ const SvgBluetoothDriveOutlined24Px = (props: SVGProps<SVGSVGElement>) => (
     <path d="M22 3.85 19.15 1h-.5v3.79l-2.3-2.29-.7.7L18.44 6l-2.79 2.79.7.71 2.3-2.3V11h.5L22 8.14 19.85 6zm-2.35-.94.94.94-.94.94zm.94 5.23-.94.94V7.2z" />
   </svg>
 );
-export default SvgBluetoothDriveOutlined24Px;
+const ForwardRef = forwardRef(SvgBluetoothDriveOutlined24Px);
+const Memo = memo(ForwardRef);
+export default Memo;

@@ -1,7 +1,17 @@
 import * as React from "react";
 import type { SVGProps } from "react";
-const SvgAdminPanelSettingsOutlined24Px = (props: SVGProps<SVGSVGElement>) => (
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" {...props}>
+import { Ref, forwardRef, memo } from "react";
+const SvgAdminPanelSettingsOutlined24Px = (
+  props: SVGProps<SVGSVGElement>,
+  ref: Ref<SVGSVGElement>
+) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 24 24"
+    className="tui-icon"
+    ref={ref}
+    {...props}
+  >
     <path fill="none" d="M0 0h24v24H0z" />
     <g fillRule="evenodd">
       <circle cx={17} cy={15.5} r={1.12} />
@@ -10,4 +20,6 @@ const SvgAdminPanelSettingsOutlined24Px = (props: SVGProps<SVGSVGElement>) => (
     </g>
   </svg>
 );
-export default SvgAdminPanelSettingsOutlined24Px;
+const ForwardRef = forwardRef(SvgAdminPanelSettingsOutlined24Px);
+const Memo = memo(ForwardRef);
+export default Memo;

@@ -1,7 +1,17 @@
 import * as React from "react";
 import type { SVGProps } from "react";
-const SvgBreakfastDiningTwoTone24Px = (props: SVGProps<SVGSVGElement>) => (
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" {...props}>
+import { Ref, forwardRef, memo } from "react";
+const SvgBreakfastDiningTwoTone24Px = (
+  props: SVGProps<SVGSVGElement>,
+  ref: Ref<SVGSVGElement>
+) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 24 24"
+    className="tui-icon"
+    ref={ref}
+    {...props}
+  >
     <path fill="none" d="M0 0h24v24H0z" />
     <path
       d="M18 5H6c-1.1 0-2 .9-2 2 0 .71.38 1.35 1.01 1.73l.99.58V19h12V9.3l1-.58c.63-.36 1-1.01 1-1.72 0-1.1-.9-2-2-2m-2.29 8.7-3 3c-.2.2-.45.3-.71.3s-.51-.1-.71-.29l-3-3a.996.996 0 0 1 0-1.41l3-3c.2-.2.45-.3.71-.3s.51.1.71.29l3 3c.39.39.39 1.02 0 1.41"
@@ -11,4 +21,6 @@ const SvgBreakfastDiningTwoTone24Px = (props: SVGProps<SVGSVGElement>) => (
     <path d="M12.71 9.29C12.51 9.1 12.26 9 12 9s-.51.1-.71.29l-3 3a.996.996 0 0 0 0 1.41l3 3c.2.2.45.3.71.3s.51-.1.71-.29l3-3a.996.996 0 0 0 0-1.41zM12 14.58 10.41 13 12 11.41 13.59 13z" />
   </svg>
 );
-export default SvgBreakfastDiningTwoTone24Px;
+const ForwardRef = forwardRef(SvgBreakfastDiningTwoTone24Px);
+const Memo = memo(ForwardRef);
+export default Memo;

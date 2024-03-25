@@ -1,7 +1,17 @@
 import * as React from "react";
 import type { SVGProps } from "react";
-const Svg16MpTwoTone24Px = (props: SVGProps<SVGSVGElement>) => (
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" {...props}>
+import { Ref, forwardRef, memo } from "react";
+const Svg16MpTwoTone24Px = (
+  props: SVGProps<SVGSVGElement>,
+  ref: Ref<SVGSVGElement>
+) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 24 24"
+    className="tui-icon"
+    ref={ref}
+    {...props}
+  >
     <path fill="none" d="M0 0h24v24H0z" />
     <path
       d="M5 19h14V5H5zm13-5.5V16c0 .55-.45 1-1 1h-2v1.5h-1.5v-6H17c.55 0 1 .45 1 1m-6-7c0-.55.45-1 1-1h3.5V7h-3v1h2c.55 0 1 .45 1 1v1.5c0 .55-.45 1-1 1H13c-.55 0-1-.45-1-1zm-5-1h3v6H8.5V7H7zm-1 8c0-.55.45-1 1-1h4.5c.55 0 1 .45 1 1v5H11V14h-1v3H8.5v-3h-1v4.5H6z"
@@ -13,4 +23,6 @@ const Svg16MpTwoTone24Px = (props: SVGProps<SVGSVGElement>) => (
     <path d="M13 11.5h2.5c.55 0 1-.45 1-1V9c0-.55-.45-1-1-1h-2V7h3V5.5H13c-.55 0-1 .45-1 1v4c0 .55.45 1 1 1m.5-2.5H15v1.5h-1.5zM8.5 11.5H10v-6H7V7h1.5z" />
   </svg>
 );
-export default Svg16MpTwoTone24Px;
+const ForwardRef = forwardRef(Svg16MpTwoTone24Px);
+const Memo = memo(ForwardRef);
+export default Memo;

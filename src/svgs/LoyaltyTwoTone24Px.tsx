@@ -1,7 +1,17 @@
 import * as React from "react";
 import type { SVGProps } from "react";
-const SvgLoyaltyTwoTone24Px = (props: SVGProps<SVGSVGElement>) => (
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" {...props}>
+import { Ref, forwardRef, memo } from "react";
+const SvgLoyaltyTwoTone24Px = (
+  props: SVGProps<SVGSVGElement>,
+  ref: Ref<SVGSVGElement>
+) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 24 24"
+    className="tui-icon"
+    ref={ref}
+    {...props}
+  >
     <path fill="none" d="M0 0h24v24H0z" />
     <path
       d="M11 4H4v7l9 9.01L20 13zM6.5 8C5.67 8 5 7.33 5 6.5S5.67 5 6.5 5 8 5.67 8 6.5 7.33 8 6.5 8m6.5 3.7.6-.6a2.053 2.053 0 0 1 2.9 2.9L13 17.5 9.5 14c-.37-.38-.6-.89-.6-1.45 0-1.13.92-2.05 2.05-2.05.57 0 1.08.23 1.45.61z"
@@ -12,4 +22,6 @@ const SvgLoyaltyTwoTone24Px = (props: SVGProps<SVGSVGElement>) => (
     <path d="M8.9 12.55c0 .57.23 1.07.6 1.45l3.5 3.5 3.5-3.5a2.053 2.053 0 0 0-2.9-2.9l-.6.6-.6-.59c-.37-.38-.89-.61-1.45-.61-1.13 0-2.05.92-2.05 2.05" />
   </svg>
 );
-export default SvgLoyaltyTwoTone24Px;
+const ForwardRef = forwardRef(SvgLoyaltyTwoTone24Px);
+const Memo = memo(ForwardRef);
+export default Memo;

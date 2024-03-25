@@ -1,7 +1,17 @@
 import * as React from "react";
 import type { SVGProps } from "react";
-const SvgFireHydrantAltTwoTone24Px = (props: SVGProps<SVGSVGElement>) => (
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" {...props}>
+import { Ref, forwardRef, memo } from "react";
+const SvgFireHydrantAltTwoTone24Px = (
+  props: SVGProps<SVGSVGElement>,
+  ref: Ref<SVGSVGElement>
+) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 24 24"
+    className="tui-icon"
+    ref={ref}
+    {...props}
+  >
     <path fill="none" d="M0 0h24v24H0z" />
     <path
       d="M12 4c-1.47 0-2.75.81-3.44 2h6.89c-.7-1.19-1.98-2-3.45-2"
@@ -16,4 +26,6 @@ const SvgFireHydrantAltTwoTone24Px = (props: SVGProps<SVGSVGElement>) => (
     <path d="M19 11h-1V8h2V6h-2.35a5.99 5.99 0 0 0-11.3 0H4v2h2v3H5c-1.1 0-2 .9-2 2v2c0 1.1.9 2 2 2h1v3H4v2h16v-2h-2v-3h1c1.1 0 2-.9 2-2v-2c0-1.1-.9-2-2-2m-7-7c1.47 0 2.75.81 3.44 2H8.56c.69-1.19 1.97-2 3.44-2m7 11h-3v5H8v-5H5v-2h3V8h8v5h3z" />
   </svg>
 );
-export default SvgFireHydrantAltTwoTone24Px;
+const ForwardRef = forwardRef(SvgFireHydrantAltTwoTone24Px);
+const Memo = memo(ForwardRef);
+export default Memo;

@@ -1,7 +1,17 @@
 import * as React from "react";
 import type { SVGProps } from "react";
-const SvgUnfoldLessDoubleRounded24Px = (props: SVGProps<SVGSVGElement>) => (
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" {...props}>
+import { Ref, forwardRef, memo } from "react";
+const SvgUnfoldLessDoubleRounded24Px = (
+  props: SVGProps<SVGSVGElement>,
+  ref: Ref<SVGSVGElement>
+) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 24 24"
+    className="tui-icon"
+    ref={ref}
+    {...props}
+  >
     <g fill="none">
       <path d="M0 0h24v24H0z" />
       <path d="M0 0h24v24H0z" />
@@ -11,4 +21,6 @@ const SvgUnfoldLessDoubleRounded24Px = (props: SVGProps<SVGSVGElement>) => (
     <path d="m9.54 18.29 2.47-2.45 2.46 2.46a.996.996 0 1 0 1.41-1.41l-3.17-3.18a.996.996 0 0 0-1.41 0l-3.17 3.17a.996.996 0 1 0 1.41 1.41" />
   </svg>
 );
-export default SvgUnfoldLessDoubleRounded24Px;
+const ForwardRef = forwardRef(SvgUnfoldLessDoubleRounded24Px);
+const Memo = memo(ForwardRef);
+export default Memo;

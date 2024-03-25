@@ -1,7 +1,17 @@
 import * as React from "react";
 import type { SVGProps } from "react";
-const SvgAutoDeleteTwoTone24Px = (props: SVGProps<SVGSVGElement>) => (
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" {...props}>
+import { Ref, forwardRef, memo } from "react";
+const SvgAutoDeleteTwoTone24Px = (
+  props: SVGProps<SVGSVGElement>,
+  ref: Ref<SVGSVGElement>
+) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 24 24"
+    className="tui-icon"
+    ref={ref}
+    {...props}
+  >
     <path fill="none" d="M0 0h24v24H0z" />
     <path
       d="M12 7H4v10h5.08c-.05-.33-.08-.66-.08-1 0-2.38 1.19-4.47 3-5.74z"
@@ -11,4 +21,6 @@ const SvgAutoDeleteTwoTone24Px = (props: SVGProps<SVGSVGElement>) => (
     <path d="M16.5 12H15v5l3.6 2.1.8-1.2-2.9-1.7z" />
   </svg>
 );
-export default SvgAutoDeleteTwoTone24Px;
+const ForwardRef = forwardRef(SvgAutoDeleteTwoTone24Px);
+const Memo = memo(ForwardRef);
+export default Memo;

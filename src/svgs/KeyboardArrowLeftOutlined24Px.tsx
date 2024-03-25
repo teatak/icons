@@ -1,9 +1,21 @@
 import * as React from "react";
 import type { SVGProps } from "react";
-const SvgKeyboardArrowLeftOutlined24Px = (props: SVGProps<SVGSVGElement>) => (
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" {...props}>
+import { Ref, forwardRef, memo } from "react";
+const SvgKeyboardArrowLeftOutlined24Px = (
+  props: SVGProps<SVGSVGElement>,
+  ref: Ref<SVGSVGElement>
+) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 24 24"
+    className="tui-icon"
+    ref={ref}
+    {...props}
+  >
     <path fill="none" d="M0 0h24v24H0z" />
     <path d="M15.41 16.59 10.83 12l4.58-4.59L14 6l-6 6 6 6z" />
   </svg>
 );
-export default SvgKeyboardArrowLeftOutlined24Px;
+const ForwardRef = forwardRef(SvgKeyboardArrowLeftOutlined24Px);
+const Memo = memo(ForwardRef);
+export default Memo;

@@ -1,7 +1,17 @@
 import * as React from "react";
 import type { SVGProps } from "react";
-const SvgMarkAsUnreadTwoTone24Px = (props: SVGProps<SVGSVGElement>) => (
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" {...props}>
+import { Ref, forwardRef, memo } from "react";
+const SvgMarkAsUnreadTwoTone24Px = (
+  props: SVGProps<SVGSVGElement>,
+  ref: Ref<SVGSVGElement>
+) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 24 24"
+    className="tui-icon"
+    ref={ref}
+    {...props}
+  >
     <path fill="none" d="M0 0h24v24H0z" />
     <path d="M13.5 13.33 20 10H7z" opacity={0.3} />
     <path d="M7 12v7h13v-7l-6.5 3.33z" opacity={0.3} />
@@ -9,4 +19,6 @@ const SvgMarkAsUnreadTwoTone24Px = (props: SVGProps<SVGSVGElement>) => (
     <path d="M20 8H7c-1.1 0-2 .9-2 2v9c0 1.1.9 2 2 2h13c1.1 0 2-.9 2-2v-9c0-1.1-.9-2-2-2m0 11H7v-7l6.5 3.33L20 12zm-6.5-5.67L7 10h13z" />
   </svg>
 );
-export default SvgMarkAsUnreadTwoTone24Px;
+const ForwardRef = forwardRef(SvgMarkAsUnreadTwoTone24Px);
+const Memo = memo(ForwardRef);
+export default Memo;

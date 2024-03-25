@@ -1,7 +1,17 @@
 import * as React from "react";
 import type { SVGProps } from "react";
-const SvgSignalCellularNoSim24Px = (props: SVGProps<SVGSVGElement>) => (
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" {...props}>
+import { Ref, forwardRef, memo } from "react";
+const SvgSignalCellularNoSim24Px = (
+  props: SVGProps<SVGSVGElement>,
+  ref: Ref<SVGSVGElement>
+) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 24 24"
+    className="tui-icon"
+    ref={ref}
+    {...props}
+  >
     <path
       fill="none"
       d="M-618-2872H782V728H-618zM-1 0h26v24H-1zm1 0h24v24H0z"
@@ -10,4 +20,6 @@ const SvgSignalCellularNoSim24Px = (props: SVGProps<SVGSVGElement>) => (
     <path fill="none" d="M.01 0h24v24h-24z" />
   </svg>
 );
-export default SvgSignalCellularNoSim24Px;
+const ForwardRef = forwardRef(SvgSignalCellularNoSim24Px);
+const Memo = memo(ForwardRef);
+export default Memo;

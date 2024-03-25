@@ -1,7 +1,17 @@
 import * as React from "react";
 import type { SVGProps } from "react";
-const SvgFireTruckRounded24Px = (props: SVGProps<SVGSVGElement>) => (
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" {...props}>
+import { Ref, forwardRef, memo } from "react";
+const SvgFireTruckRounded24Px = (
+  props: SVGProps<SVGSVGElement>,
+  ref: Ref<SVGSVGElement>
+) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 24 24"
+    className="tui-icon"
+    ref={ref}
+    {...props}
+  >
     <g fill="none">
       <path d="M0 0h24v24H0z" />
       <path d="M0 0h24v24H0z" />
@@ -10,4 +20,6 @@ const SvgFireTruckRounded24Px = (props: SVGProps<SVGSVGElement>) => (
     <path d="M10.25 8.5H10v-2h.25c.41 0 .75-.34.75-.75S10.66 5 10.25 5h-8.5c-.41 0-.75.34-.75.75s.34.75.75.75H2v2h-.25c-.41 0-.75.34-.75.75s.34.75.75.75h8.5c.41 0 .75-.34.75-.75s-.34-.75-.75-.75m-5 0H3.5v-2h1.75zm3.25 0H6.75v-2H8.5z" />
   </svg>
 );
-export default SvgFireTruckRounded24Px;
+const ForwardRef = forwardRef(SvgFireTruckRounded24Px);
+const Memo = memo(ForwardRef);
+export default Memo;

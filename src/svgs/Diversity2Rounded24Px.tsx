@@ -1,7 +1,17 @@
 import * as React from "react";
 import type { SVGProps } from "react";
-const SvgDiversity2Rounded24Px = (props: SVGProps<SVGSVGElement>) => (
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" {...props}>
+import { Ref, forwardRef, memo } from "react";
+const SvgDiversity2Rounded24Px = (
+  props: SVGProps<SVGSVGElement>,
+  ref: Ref<SVGSVGElement>
+) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 24 24"
+    className="tui-icon"
+    ref={ref}
+    {...props}
+  >
     <g fill="none">
       <path d="M0 0h24v24H0z" />
       <path d="M0 0h24v24H0z" />
@@ -11,4 +21,6 @@ const SvgDiversity2Rounded24Px = (props: SVGProps<SVGSVGElement>) => (
     <path d="M12.1 15.04c-.72 3.38-1.32 5.48-2.89 5.9-.81.22-1.62-.15-2.04-.88-.56-.96-.2-1.66.39-3.32l-.46-.81c-1.7-.31-2.5-.33-3.07-1.32-.53-.91-.24-2 .68-2.53.09-.05.19-.08.29-.11-.27-.42-.5-.87-.67-1.37-.24-.11-.36-.16-.6-.26a3.816 3.816 0 0 0-1.43 5.27c.06.1.14.18.21.28-.75.13-1.48.49-2.01 1.36-.48.78-.62 1.77-.3 2.63a3 3 0 0 0 4.31 1.55c.32-.18.58-.42.8-.69.05.11.08.22.14.32 1.08 1.87 3.39 2.49 5.26 1.41 1.93-1.11 2.61-3.51 3.36-7.01a.996.996 0 0 0-.72-1.17 1 1 0 0 0-1.25.75" />
   </svg>
 );
-export default SvgDiversity2Rounded24Px;
+const ForwardRef = forwardRef(SvgDiversity2Rounded24Px);
+const Memo = memo(ForwardRef);
+export default Memo;

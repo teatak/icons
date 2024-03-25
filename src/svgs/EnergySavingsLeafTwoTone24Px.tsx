@@ -1,7 +1,17 @@
 import * as React from "react";
 import type { SVGProps } from "react";
-const SvgEnergySavingsLeafTwoTone24Px = (props: SVGProps<SVGSVGElement>) => (
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" {...props}>
+import { Ref, forwardRef, memo } from "react";
+const SvgEnergySavingsLeafTwoTone24Px = (
+  props: SVGProps<SVGSVGElement>,
+  ref: Ref<SVGSVGElement>
+) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 24 24"
+    className="tui-icon"
+    ref={ref}
+    {...props}
+  >
     <path fill="none" d="M0 0h24v24H0z" />
     <path
       d="M7.1 7.01C5.74 8.32 5 10.1 5 12c0 3.86 3.14 7 7 7 1.87 0 3.63-.73 4.95-2.05A6.96 6.96 0 0 0 19 12V5h-7c-1.84 0-3.58.71-4.9 2.01m6.78.11c.14.14.16.36.04.52l-2.44 3.33 4.05.4c.44.04.63.59.3.89l-5.16 4.63c-.16.15-.41.14-.56-.01a.4.4 0 0 1-.04-.52l2.44-3.33-4.05-.4a.514.514 0 0 1-.3-.89l5.16-4.63c.16-.15.41-.14.56.01"
@@ -11,4 +21,6 @@ const SvgEnergySavingsLeafTwoTone24Px = (props: SVGProps<SVGSVGElement>) => (
     <path d="m8.46 12.63 4.05.4-2.44 3.33c-.11.16-.1.38.04.52.15.15.4.16.56.01l5.16-4.63c.33-.3.15-.85-.3-.89l-4.05-.4 2.44-3.33c.11-.16.1-.38-.04-.52a.405.405 0 0 0-.56-.01l-5.16 4.63c-.32.3-.14.85.3.89" />
   </svg>
 );
-export default SvgEnergySavingsLeafTwoTone24Px;
+const ForwardRef = forwardRef(SvgEnergySavingsLeafTwoTone24Px);
+const Memo = memo(ForwardRef);
+export default Memo;

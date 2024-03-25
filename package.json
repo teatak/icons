@@ -1,6 +1,6 @@
 {
   "name": "@teatak/icons",
-  "version": "1.2.1",
+  "version": "1.2.2",
   "description": "teatak icons",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
@@ -18,7 +18,7 @@
     "clean:dist": "rimraf dist",
     "build": "export NODE_OPTIONS=--max-old-space-size=8192 && npm run svgr && npm-run-all clean:** build:**",
     "build:rollup": "rollup -c --bundleConfigAsCjs",
-    "svgr": "npx @svgr/cli --out-dir src/svgs --no-dimensions --typescript --index-template scripts/index-template.js -- src/files"
+    "svgr": "npx @svgr/cli --out-dir src/svgs --svg-props className=\"tui-icon\" --ref --memo --no-dimensions --typescript --template scripts/template.js --index-template scripts/index-template.js -- src/files"
   },
   "dependencies": {
     "classnames": "^2.5.1",
@@ -33,6 +33,7 @@
     "@rollup/plugin-node-resolve": "^15.2.3",
     "@rollup/plugin-typescript": "^11.1.6",
     "@svgr/cli": "^8.1.0",
+    "@svgr/core": "^8.1.0",
     "@types/react": "^18.2.67",
     "@types/react-dom": "^18.2.22",
     "npm-run-all": "^4.1.5",

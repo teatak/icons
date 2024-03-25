@@ -1,7 +1,17 @@
 import * as React from "react";
 import type { SVGProps } from "react";
-const SvgStopScreenShareTwoTone24Px = (props: SVGProps<SVGSVGElement>) => (
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" {...props}>
+import { Ref, forwardRef, memo } from "react";
+const SvgStopScreenShareTwoTone24Px = (
+  props: SVGProps<SVGSVGElement>,
+  ref: Ref<SVGSVGElement>
+) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 24 24"
+    className="tui-icon"
+    ref={ref}
+    {...props}
+  >
     <path fill="none" d="M0 0h24v24H0z" />
     <path
       d="M10.67 12.54C9.13 12.92 7.96 13.71 7 15c.31-1.48.94-2.93 2.08-4.05L4.13 6.02H4v10.01h10.14z"
@@ -14,4 +24,6 @@ const SvgStopScreenShareTwoTone24Px = (props: SVGProps<SVGSVGElement>) => (
     />
   </svg>
 );
-export default SvgStopScreenShareTwoTone24Px;
+const ForwardRef = forwardRef(SvgStopScreenShareTwoTone24Px);
+const Memo = memo(ForwardRef);
+export default Memo;

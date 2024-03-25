@@ -1,7 +1,17 @@
 import * as React from "react";
 import type { SVGProps } from "react";
-const SvgSportsKabaddiRounded24Px = (props: SVGProps<SVGSVGElement>) => (
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" {...props}>
+import { Ref, forwardRef, memo } from "react";
+const SvgSportsKabaddiRounded24Px = (
+  props: SVGProps<SVGSVGElement>,
+  ref: Ref<SVGSVGElement>
+) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 24 24"
+    className="tui-icon"
+    ref={ref}
+    {...props}
+  >
     <g fill="none">
       <path d="M0 0h24v24H0z" />
       <path d="M0 0h24v24H0z" />
@@ -11,4 +21,6 @@ const SvgSportsKabaddiRounded24Px = (props: SVGProps<SVGSVGElement>) => (
     <path d="m11.24 10.56-2-2c-.1-.1-.2-.18-.31-.26a1.9 1.9 0 0 0-.72-.28c-.13-.03-.25-.04-.38-.04-.51 0-1.02.2-1.41.59l-3.34 3.34c-.41.41-.62.98-.58 1.54 0 .18.04.37.11.55l1.07 2.95-2.92 2.92a.996.996 0 1 0 1.41 1.41l3.54-3.54v-2.22L7 16.75v4.13c0 .55.45 1 1 1s1-.45 1-1v-5l-2.12-2.12 2.36-2.36.71.71c1.02 1 2.28 1.69 3.79 1.94.64.11 1.21-.45 1.16-1.1-.03-.48-.4-.87-.87-.94-1.13-.18-2.06-.72-2.79-1.45" />
   </svg>
 );
-export default SvgSportsKabaddiRounded24Px;
+const ForwardRef = forwardRef(SvgSportsKabaddiRounded24Px);
+const Memo = memo(ForwardRef);
+export default Memo;

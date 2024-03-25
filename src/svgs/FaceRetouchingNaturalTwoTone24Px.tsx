@@ -1,9 +1,17 @@
 import * as React from "react";
 import type { SVGProps } from "react";
+import { Ref, forwardRef, memo } from "react";
 const SvgFaceRetouchingNaturalTwoTone24Px = (
-  props: SVGProps<SVGSVGElement>
+  props: SVGProps<SVGSVGElement>,
+  ref: Ref<SVGSVGElement>
 ) => (
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" {...props}>
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 24 24"
+    className="tui-icon"
+    ref={ref}
+    {...props}
+  >
     <path fill="none" d="M0 0h24v24H0z" />
     <path
       d="M10.66 4.12c2.55 4.23 7.03 3.87 7.18 3.86l-.57-1.25L12.4 4.5l.85-.39C12.84 4.04 12.43 4 12 4c-.46 0-.91.05-1.34.12M8.08 5.03a8.05 8.05 0 0 0-3.66 4.44 8.05 8.05 0 0 0 3.66-4.44"
@@ -15,4 +23,6 @@ const SvgFaceRetouchingNaturalTwoTone24Px = (
     <path d="M20.6 3.4 19.5 1l-1.1 2.4L16 4.5l2.4 1.1L19.5 8l1.1-2.4L23 4.5z" />
   </svg>
 );
-export default SvgFaceRetouchingNaturalTwoTone24Px;
+const ForwardRef = forwardRef(SvgFaceRetouchingNaturalTwoTone24Px);
+const Memo = memo(ForwardRef);
+export default Memo;

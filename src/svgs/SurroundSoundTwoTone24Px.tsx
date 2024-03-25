@@ -1,7 +1,17 @@
 import * as React from "react";
 import type { SVGProps } from "react";
-const SvgSurroundSoundTwoTone24Px = (props: SVGProps<SVGSVGElement>) => (
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" {...props}>
+import { Ref, forwardRef, memo } from "react";
+const SvgSurroundSoundTwoTone24Px = (
+  props: SVGProps<SVGSVGElement>,
+  ref: Ref<SVGSVGElement>
+) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 24 24"
+    className="tui-icon"
+    ref={ref}
+    {...props}
+  >
     <g fill="none">
       <path d="M0 0h24v24H0z" />
       <path d="M0 0h24v24H0z" />
@@ -15,4 +25,6 @@ const SvgSurroundSoundTwoTone24Px = (props: SVGProps<SVGSVGElement>) => (
     <path d="M8.29 15.71A5.23 5.23 0 0 1 6.75 12c0-1.35.52-2.69 1.53-3.72L7.05 7.05C5.68 8.41 5 10.21 5 12s.68 3.59 2.06 4.94zM12 15.5c1.93 0 3.5-1.57 3.5-3.5S13.93 8.5 12 8.5 8.5 10.07 8.5 12s1.57 3.5 3.5 3.5m0-5c.83 0 1.5.67 1.5 1.5s-.67 1.5-1.5 1.5-1.5-.67-1.5-1.5.67-1.5 1.5-1.5M15.72 15.72l1.23 1.23C18.32 15.59 19 13.79 19 12s-.68-3.59-2.06-4.94l-1.23 1.23A5.23 5.23 0 0 1 17.25 12c0 1.35-.52 2.69-1.53 3.72" />
   </svg>
 );
-export default SvgSurroundSoundTwoTone24Px;
+const ForwardRef = forwardRef(SvgSurroundSoundTwoTone24Px);
+const Memo = memo(ForwardRef);
+export default Memo;

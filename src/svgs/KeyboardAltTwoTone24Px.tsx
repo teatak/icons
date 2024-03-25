@@ -1,7 +1,17 @@
 import * as React from "react";
 import type { SVGProps } from "react";
-const SvgKeyboardAltTwoTone24Px = (props: SVGProps<SVGSVGElement>) => (
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" {...props}>
+import { Ref, forwardRef, memo } from "react";
+const SvgKeyboardAltTwoTone24Px = (
+  props: SVGProps<SVGSVGElement>,
+  ref: Ref<SVGSVGElement>
+) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 24 24"
+    className="tui-icon"
+    ref={ref}
+    {...props}
+  >
     <path fill="none" d="M0 0h24v24H0z" />
     <path
       d="M3 19h18V6H3zM17 8h2v2h-2zm0 4h2v2h-2zm-4-4h2v2h-2zm0 4h2v2h-2zM9 8h2v2H9zm0 4h2v2H9zm-1 4h8v1H8zM5 8h2v2H5zm0 4h2v2H5z"
@@ -11,4 +21,6 @@ const SvgKeyboardAltTwoTone24Px = (props: SVGProps<SVGSVGElement>) => (
     <path d="M9 8h2v2H9zM5 8h2v2H5zM8 16h8v1H8zM13 8h2v2h-2zM9 12h2v2H9zM5 12h2v2H5zM13 12h2v2h-2zM17 8h2v2h-2zM17 12h2v2h-2z" />
   </svg>
 );
-export default SvgKeyboardAltTwoTone24Px;
+const ForwardRef = forwardRef(SvgKeyboardAltTwoTone24Px);
+const Memo = memo(ForwardRef);
+export default Memo;

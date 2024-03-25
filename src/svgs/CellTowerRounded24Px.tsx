@@ -1,7 +1,17 @@
 import * as React from "react";
 import type { SVGProps } from "react";
-const SvgCellTowerRounded24Px = (props: SVGProps<SVGSVGElement>) => (
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" {...props}>
+import { Ref, forwardRef, memo } from "react";
+const SvgCellTowerRounded24Px = (
+  props: SVGProps<SVGSVGElement>,
+  ref: Ref<SVGSVGElement>
+) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 24 24"
+    className="tui-icon"
+    ref={ref}
+    {...props}
+  >
     <g fill="none">
       <path d="M0 0h24v24H0z" />
       <path d="M0 0h24v24H0z" />
@@ -10,4 +20,6 @@ const SvgCellTowerRounded24Px = (props: SVGProps<SVGSVGElement>) => (
     <path d="m5.57 3.57-.08-.08c-.33-.33-.88-.29-1.18.08C2.79 5.45 2 7.68 2 10s.79 4.55 2.31 6.43c.3.37.85.42 1.18.08l.08-.08c.3-.3.29-.76.03-1.08-1.27-1.54-1.9-3.48-1.9-5.35s.63-3.81 1.9-5.35c.26-.32.27-.78-.03-1.08M16.07 14.07c.36.36.95.32 1.26-.09.9-1.18 1.37-2.58 1.37-3.98-.08-1.41-.51-2.83-1.4-4.01a.797.797 0 0 0-1.2-.09l-.08.08c-.27.27-.32.71-.08 1.01.7.92 1.06 2 1.06 3.01 0 1.07-.34 2.13-1.01 2.98-.26.32-.22.79.08 1.09M14.5 10c0-1.6-1.51-2.85-3.18-2.41-.8.21-1.46.85-1.7 1.65-.32 1.06.06 2.04.76 2.64l-2.96 8.87c-.21.62.25 1.25.9 1.25.41 0 .77-.26.9-.65L9.67 20h4.67l.45 1.35a.949.949 0 1 0 1.8-.6l-2.96-8.87c.53-.46.87-1.12.87-1.88m-4.17 8L12 13l1.67 5z" />
   </svg>
 );
-export default SvgCellTowerRounded24Px;
+const ForwardRef = forwardRef(SvgCellTowerRounded24Px);
+const Memo = memo(ForwardRef);
+export default Memo;

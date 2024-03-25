@@ -1,7 +1,17 @@
 import * as React from "react";
 import type { SVGProps } from "react";
-const SvgSynagogueTwoTone24Px = (props: SVGProps<SVGSVGElement>) => (
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" {...props}>
+import { Ref, forwardRef, memo } from "react";
+const SvgSynagogueTwoTone24Px = (
+  props: SVGProps<SVGSVGElement>,
+  ref: Ref<SVGSVGElement>
+) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 24 24"
+    className="tui-icon"
+    ref={ref}
+    {...props}
+  >
     <path fill="none" d="M0 0h24v24H0z" />
     <path
       d="M4 6c-.55 0-1 .45-1 1v1h2V7c0-.55-.45-1-1-1M3 10h2v9H3zM7 9.92V19h2v-3c0-1.65 1.35-3 3-3s3 1.35 3 3v3h2V9.92l-5-4.29zm6.5.08c0 .83-.67 1.5-1.5 1.5s-1.5-.67-1.5-1.5.67-1.5 1.5-1.5 1.5.67 1.5 1.5M20 6c-.55 0-1 .45-1 1v1h2V7c0-.55-.45-1-1-1M19 10h2v9h-2z"
@@ -11,4 +21,6 @@ const SvgSynagogueTwoTone24Px = (props: SVGProps<SVGSVGElement>) => (
     <circle cx={12} cy={10} r={1.5} />
   </svg>
 );
-export default SvgSynagogueTwoTone24Px;
+const ForwardRef = forwardRef(SvgSynagogueTwoTone24Px);
+const Memo = memo(ForwardRef);
+export default Memo;
