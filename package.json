@@ -1,6 +1,6 @@
 {
   "name": "@teatak/icons",
-  "version": "1.2.3",
+  "version": "1.2.5",
   "description": "teatak icons",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
@@ -22,6 +22,7 @@
     "svgr:pure": "npx @svgr/cli --out-dir src/svgs --svg-props className=\"tui-icon\" --ref --memo --no-dimensions --typescript --template scripts/template.pure.js --index-template scripts/index-template.js -- src/files"
   },
   "dependencies": {
+    "classnames": "^2.5.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
