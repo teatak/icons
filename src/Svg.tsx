@@ -8,7 +8,7 @@ export const createSvg = (...path: any) => {
             'tui-icon',
             className,
         ); return <svg className={classNames} viewBox={viewBox ? viewBox : "0 0 24 24"} {...rest} >
-            {path}
+            {...path}
         </svg>
     }))
 }
