@@ -1,21 +1,6 @@
 import * as React from "react";
-import type { SVGProps } from "react";
-import { Ref, forwardRef, memo } from "react";
-const SvgRMobiledataRounded24Px = (
-  props: SVGProps<SVGSVGElement>,
-  ref: Ref<SVGSVGElement>
-) => (
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    viewBox="0 0 24 24"
-    className="tui-icon"
-    ref={ref}
-    {...props}
-  >
-    <path fill="none" d="M0 0h24v24H0z" />
-    <path d="m7.8 7.2.65 1.52A.915.915 0 0 1 7.61 10c-.37 0-.7-.22-.85-.56l-.89-2.11H4v1.75c0 .51-.41.92-.92.92h-.16C2.41 10 2 9.59 2 9.08V3c0-.55.45-1 1-1h4c1.1 0 2 .9 2 2v1.33c0 .8-.53 1.54-1.2 1.87M7 4H4v1.33h3z" />
-  </svg>
+import { createSvg } from "../Svg";
+export default createSvg(
+  <path fill="none" d="M0 0h24v24H0z" />,
+  <path d="m7.8 7.2.65 1.52A.915.915 0 0 1 7.61 10c-.37 0-.7-.22-.85-.56l-.89-2.11H4v1.75c0 .51-.41.92-.92.92h-.16C2.41 10 2 9.59 2 9.08V3c0-.55.45-1 1-1h4c1.1 0 2 .9 2 2v1.33c0 .8-.53 1.54-1.2 1.87M7 4H4v1.33h3z" />
 );
-const ForwardRef = forwardRef(SvgRMobiledataRounded24Px);
-const Memo = memo(ForwardRef);
-export default Memo;

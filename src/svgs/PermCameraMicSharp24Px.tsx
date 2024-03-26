@@ -1,21 +1,6 @@
 import * as React from "react";
-import type { SVGProps } from "react";
-import { Ref, forwardRef, memo } from "react";
-const SvgPermCameraMicSharp24Px = (
-  props: SVGProps<SVGSVGElement>,
-  ref: Ref<SVGSVGElement>
-) => (
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    viewBox="0 0 24 24"
-    className="tui-icon"
-    ref={ref}
-    {...props}
-  >
-    <path fill="none" d="M0 0h24v24H0z" />
-    <path d="M22 5h-5.17L15 3H9L7.17 5H2v16h9v-2.09c-2.83-.48-5-2.94-5-5.91h2c0 2.21 1.79 4 4 4s4-1.79 4-4h2c0 2.97-2.17 5.43-5 5.91V21h9zm-8 8c0 1.1-.9 2-2 2s-2-.9-2-2V9c0-1.1.9-2 2-2s2 .9 2 2z" />
-  </svg>
+import { createSvg } from "../Svg";
+export default createSvg(
+  <path fill="none" d="M0 0h24v24H0z" />,
+  <path d="M22 5h-5.17L15 3H9L7.17 5H2v16h9v-2.09c-2.83-.48-5-2.94-5-5.91h2c0 2.21 1.79 4 4 4s4-1.79 4-4h2c0 2.97-2.17 5.43-5 5.91V21h9zm-8 8c0 1.1-.9 2-2 2s-2-.9-2-2V9c0-1.1.9-2 2-2s2 .9 2 2z" />
 );
-const ForwardRef = forwardRef(SvgPermCameraMicSharp24Px);
-const Memo = memo(ForwardRef);
-export default Memo;

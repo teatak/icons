@@ -1,22 +1,7 @@
 import * as React from "react";
-import type { SVGProps } from "react";
-import { Ref, forwardRef, memo } from "react";
-const SvgLocalBarTwoTone24Px = (
-  props: SVGProps<SVGSVGElement>,
-  ref: Ref<SVGSVGElement>
-) => (
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    viewBox="0 0 24 24"
-    className="tui-icon"
-    ref={ref}
-    {...props}
-  >
-    <path fill="none" d="M0 0h24v24H0z" />
-    <path d="M9.23 9 12 12.11 14.77 9z" opacity={0.3} />
-    <path d="M21 5V3H3v2l8 9v5H6v2h12v-2h-5v-5zM5.66 5h12.69l-1.78 2H7.43zM12 12.11 9.23 9h5.54z" />
-  </svg>
+import { createSvg } from "../Svg";
+export default createSvg(
+  <path fill="none" d="M0 0h24v24H0z" />,
+  <path d="M9.23 9 12 12.11 14.77 9z" opacity={0.3} />,
+  <path d="M21 5V3H3v2l8 9v5H6v2h12v-2h-5v-5zM5.66 5h12.69l-1.78 2H7.43zM12 12.11 9.23 9h5.54z" />
 );
-const ForwardRef = forwardRef(SvgLocalBarTwoTone24Px);
-const Memo = memo(ForwardRef);
-export default Memo;

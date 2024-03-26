@@ -1,21 +1,6 @@
 import * as React from "react";
-import type { SVGProps } from "react";
-import { Ref, forwardRef, memo } from "react";
-const SvgSuperscriptSharp24Px = (
-  props: SVGProps<SVGSVGElement>,
-  ref: Ref<SVGSVGElement>
-) => (
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    viewBox="0 0 24 24"
-    className="tui-icon"
-    ref={ref}
-    {...props}
-  >
-    <path fill="none" d="M0 0h24v24H0z" />
-    <path d="M20 7v1h3v1h-4V6h3V5h-3V4h4v3zM5.88 20h2.66l3.4-5.42h.12l3.4 5.42h2.66l-4.65-7.27L17.81 6h-2.68l-3.07 4.99h-.12L8.85 6H6.19l4.32 6.73z" />
-  </svg>
+import { createSvg } from "../Svg";
+export default createSvg(
+  <path fill="none" d="M0 0h24v24H0z" />,
+  <path d="M20 7v1h3v1h-4V6h3V5h-3V4h4v3zM5.88 20h2.66l3.4-5.42h.12l3.4 5.42h2.66l-4.65-7.27L17.81 6h-2.68l-3.07 4.99h-.12L8.85 6H6.19l4.32 6.73z" />
 );
-const ForwardRef = forwardRef(SvgSuperscriptSharp24Px);
-const Memo = memo(ForwardRef);
-export default Memo;

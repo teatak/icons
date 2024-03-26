@@ -1,24 +1,9 @@
 import * as React from "react";
-import type { SVGProps } from "react";
-import { Ref, forwardRef, memo } from "react";
-const SvgSynagogueRounded24Px = (
-  props: SVGProps<SVGSVGElement>,
-  ref: Ref<SVGSVGElement>
-) => (
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    viewBox="0 0 24 24"
-    className="tui-icon"
-    ref={ref}
-    {...props}
-  >
-    <g fill="none">
-      <path d="M0 0h24v24H0z" />
-      <path d="M0 0h24v24H0z" />
-    </g>
-    <path d="M6 8.94V21h4v-4.89c0-1 .68-1.92 1.66-2.08A2 2 0 0 1 14 16v5h4V8.94a2 2 0 0 0-.72-1.54l-4-3.33c-.74-.62-1.82-.62-2.56 0l-4 3.33c-.46.38-.72.94-.72 1.54M13.5 10c0 .83-.67 1.5-1.5 1.5s-1.5-.67-1.5-1.5.67-1.5 1.5-1.5 1.5.67 1.5 1.5M3 5c-1.1 0-2 .9-2 2v1h4V7c0-1.1-.9-2-2-2M3 21h2V9H1v10c0 1.1.9 2 2 2M21 5c-1.1 0-2 .9-2 2v1h4V7c0-1.1-.9-2-2-2M19 21h2c1.1 0 2-.9 2-2V9h-4z" />
-  </svg>
+import { createSvg } from "../Svg";
+export default createSvg(
+  <g fill="none">
+    <path d="M0 0h24v24H0z" />
+    <path d="M0 0h24v24H0z" />
+  </g>,
+  <path d="M6 8.94V21h4v-4.89c0-1 .68-1.92 1.66-2.08A2 2 0 0 1 14 16v5h4V8.94a2 2 0 0 0-.72-1.54l-4-3.33c-.74-.62-1.82-.62-2.56 0l-4 3.33c-.46.38-.72.94-.72 1.54M13.5 10c0 .83-.67 1.5-1.5 1.5s-1.5-.67-1.5-1.5.67-1.5 1.5-1.5 1.5.67 1.5 1.5M3 5c-1.1 0-2 .9-2 2v1h4V7c0-1.1-.9-2-2-2M3 21h2V9H1v10c0 1.1.9 2 2 2M21 5c-1.1 0-2 .9-2 2v1h4V7c0-1.1-.9-2-2-2M19 21h2c1.1 0 2-.9 2-2V9h-4z" />
 );
-const ForwardRef = forwardRef(SvgSynagogueRounded24Px);
-const Memo = memo(ForwardRef);
-export default Memo;

@@ -1,21 +1,6 @@
 import * as React from "react";
-import type { SVGProps } from "react";
-import { Ref, forwardRef, memo } from "react";
-const SvgRemoveDoneSharp24Px = (
-  props: SVGProps<SVGSVGElement>,
-  ref: Ref<SVGSVGElement>
-) => (
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    viewBox="0 0 24 24"
-    className="tui-icon"
-    ref={ref}
-    {...props}
-  >
-    <path fill="none" d="M0 0h24v24H0z" />
-    <path d="M4.84 1.98 3.43 3.39l10.38 10.38-1.41 1.41-4.24-4.24-1.41 1.41 5.66 5.66 2.83-2.83 6.6 6.6 1.41-1.41zm13.21 10.38L23 7.4 21.57 6l-4.94 4.94zm-.71-4.96-1.41-1.41-2.12 2.12 1.41 1.41zM1.08 12.35l5.66 5.66 1.41-1.41-5.66-5.66z" />
-  </svg>
+import { createSvg } from "../Svg";
+export default createSvg(
+  <path fill="none" d="M0 0h24v24H0z" />,
+  <path d="M4.84 1.98 3.43 3.39l10.38 10.38-1.41 1.41-4.24-4.24-1.41 1.41 5.66 5.66 2.83-2.83 6.6 6.6 1.41-1.41zm13.21 10.38L23 7.4 21.57 6l-4.94 4.94zm-.71-4.96-1.41-1.41-2.12 2.12 1.41 1.41zM1.08 12.35l5.66 5.66 1.41-1.41-5.66-5.66z" />
 );
-const ForwardRef = forwardRef(SvgRemoveDoneSharp24Px);
-const Memo = memo(ForwardRef);
-export default Memo;
