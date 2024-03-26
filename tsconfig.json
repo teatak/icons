@@ -7,7 +7,7 @@
             "ESNext"
         ],
         "allowJs": true,
-        "sourceMap": true,
+        "sourceMap": false,
         "jsx": "react",
         "moduleResolution": "Node",
         "noImplicitReturns": true,
