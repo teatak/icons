@@ -12,14 +12,14 @@ export default [
             {
                 dir: "./dist/cjs",
                 format: "cjs",
-                sourcemap: true,
+                sourcemap: false,
                 preserveModules: true,
                 preserveModulesRoot: 'src',
             },
             {
                 dir: "./dist/esm",
                 format: "esm",
-                sourcemap: true,
+                sourcemap: false,
                 preserveModules: true,
                 preserveModulesRoot: 'src',
             },
