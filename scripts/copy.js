@@ -25,9 +25,9 @@ walk(dirPath, (p, stats) => {
     if (arr[6] == "24px.svg") {
         let name = ""
         if (arr[5].replace("materialicons", "") == "") {
-            name = arr[4] + "_" + arr[6]
+            name = arr[4] + ".svg"
         } else {
-            name = arr[4] + "_" + arr[5].replace("materialicons", "") + "_" + arr[6]
+            name = arr[4] + "_" + arr[5].replace("materialicons", "") + ".svg"
         }
         console.log(p, name)
         fs.copyFile(p, './src/files/' + name, (err) => {

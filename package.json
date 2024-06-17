@@ -15,8 +15,8 @@
     "url": "https://github.com/teatak/icons.git"
   },
   "scripts": {
-    "clean:dist": "rimraf dist",
-    "build": "export NODE_OPTIONS=--max-old-space-size=8192 && npm run svgr && npm-run-all clean:** build:**",
+    "clean:dist": "rimraf dist && rimraf src/svgs/*",
+    "build": "export NODE_OPTIONS=--max-old-space-size=8192 && npm-run-all clean:** svgr build:**",
     "build:rollup": "rollup -c --bundleConfigAsCjs",
     "svgr": "npx @svgr/cli --out-dir src/svgs --typescript --template scripts/template.js --index-template scripts/index-template.js -- src/files",
     "svgr:pure": "npx @svgr/cli --out-dir src/svgs --svg-props className=\"tui-icon\" --ref --memo --no-dimensions --typescript --template scripts/template.pure.js --index-template scripts/index-template.js -- src/files"
